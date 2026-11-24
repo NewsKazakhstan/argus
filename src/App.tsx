@@ -1205,11 +1205,11 @@ function App() {
           {/* Logo Section */}
           <div className="mb-6 flex items-start justify-between">
             <div>
-              <h1 className="text-4xl font-extrabold tracking-tighter text-white">ARGUS</h1>
-              <div className="flex items-center gap-2 mt-2">
-                <Scan className="w-4 h-4 text-[#00e5ff]" />
-                <p className="text-xs text-[#00e5ff] font-mono tracking-widest uppercase">Global Network</p>
-              </div>
+  <h1 className="text-4xl font-extrabold tracking-tighter text-white">ARCHIVE</h1>
+  <p className="text-[11px] text-gray-400 font-mono tracking-widest mt-1">
+    @cexArchive
+  </p>
+</div>
             </div>
             <button
               onClick={() => setIsHudMinimized(!isHudMinimized)}
