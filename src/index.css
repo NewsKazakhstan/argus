@@ -1,13 +1,178 @@
+
 @import "tailwindcss";
 
+/* ARGUS — DARK TERMINAL */
 
-body, html, #root {
+:root {
+  color-scheme: dark;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  background: #050706;
+  color: #d7e5d9;
+
+  --argus-bg: #050706;
+  --argus-panel: #0a100d;
+  --argus-panel-2: #101914;
+  --argus-green: #39ff88;
+  --argus-green-dim: #16834a;
+  --argus-red: #ff4545;
+  --argus-border: #1b4930;
+  --argus-text: #d7e5d9;
+  --argus-muted: #789080;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
-  background-color: #0a0a0f;
-  color: white;
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+  background: var(--argus-bg);
+  color: var(--argus-text);
 }
+
+body {
+  overflow: hidden;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+::selection {
+  background: var(--argus-green);
+  color: #001b0b;
+}
+
+/* Scrollbars */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--argus-green-dim) #080d0a;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #080d0a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--argus-green-dim);
+  border-radius: 0;
+}
+
+/* Terminal panels */
+
+.argus-panel {
+  background: rgba(8, 15, 11, 0.96);
+  border: 1px solid var(--argus-border);
+  box-shadow: 0 0 18px rgba(57, 255, 136, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.argus-glow {
+  color: var(--argus-green);
+  text-shadow: 0 0 8px rgba(57, 255, 136, 0.55);
+}
+
+.argus-border {
+  border: 1px solid var(--argus-border);
+}
+
+/* Subtle terminal scan effect */
+
+.argus-scanlines {
+  position: relative;
+}
+
+.argus-scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(57, 255, 136, 0.15) 4px
+  );
+}
+
+/* Status indicators */
+
+.argus-online {
+  color: var(--argus-green);
+}
+
+.argus-offline {
+  color: var(--argus-red);
+}
+
+/* Mobile and tablet */
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+  }
+
+  body {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  button,
+  [role="button"] {
+    min-height: 40px;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  .argus-panel {
+    backdrop-filter: blur(6px);
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  }
