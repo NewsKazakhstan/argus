@@ -1210,7 +1210,6 @@ function App() {
                   @cexArchive
               </p>
             </div>
-            </div>
             <button
               onClick={() => setIsHudMinimized(!isHudMinimized)}
               className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white transition-all outline-none"
@@ -1357,7 +1356,6 @@ function App() {
                 </button>
               </div>
             </div>
-
             {/* 2. Media Area (Flex Grow) */}
             <div className="flex-1 relative bg-black flex flex-col min-h-0 border-b border-white/10">
               {feedWorks ? (
