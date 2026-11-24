@@ -1197,7 +1197,7 @@ function App() {
       )}
 
       {/* ── ARGUS HUD — TOP RIGHT ── */}
-      <div style={{ position: 'absolute', top: 32, right: 32, zIndex: 30, width: 340 }} className="pointer-events-auto">
+      <div className="argus-hud pointer-events-auto">
         <motion.div
           animate={{ height: isHudMinimized ? 120 : 'auto' }}
           className="bg-[#05090C]/70 backdrop-blur-2xl rounded-3xl border border-white/10 p-8 shadow-2xl relative overflow-hidden"
