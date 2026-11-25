@@ -1,3 +1,4 @@
+// ARGUS — DARK TERMINAL INTERFACE | maintained application source
 import { useState, useEffect, useRef, useMemo } from 'react';
 import DeckGL from '@deck.gl/react';
 import { ScatterplotLayer } from '@deck.gl/layers';
@@ -31,6 +32,72 @@ const scrollbarStyles = `
   }
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #33ebff;
+  }
+
+  /* ARGUS responsive layout: mobile camera, controls and panels */
+  @media (max-width: 768px) {
+    .argus-app {
+      height: 100dvh !important;
+      min-height: 100dvh !important;
+      overflow: hidden !important;
+    }
+
+    .argus-camera-window {
+      position: fixed !important;
+      top: auto !important;
+      right: 8px !important;
+      bottom: max(8px, env(safe-area-inset-bottom)) !important;
+      left: 8px !important;
+      transform: none !important;
+      width: auto !important;
+      height: 55dvh !important;
+      min-width: 0 !important;
+      min-height: 0 !important;
+      max-width: none !important;
+      z-index: 40 !important;
+    }
+
+    .argus-camera-window > div {
+      border-radius: 16px !important;
+    }
+
+    .argus-camera-window .drag-handle {
+      padding: 12px !important;
+    }
+
+    .argus-controls {
+      position: fixed !important;
+      right: 10px !important;
+      bottom: max(10px, env(safe-area-inset-bottom)) !important;
+      z-index: 120 !important;
+      gap: 8px !important;
+    }
+
+    .argus-controls > button {
+      width: 44px !important;
+      height: 44px !important;
+      min-height: 44px !important;
+    }
+
+    .argus-settings-panel,
+    .argus-filter-panel {
+      position: fixed !important;
+      left: 8px !important;
+      right: 8px !important;
+      bottom: calc(66px + env(safe-area-inset-bottom)) !important;
+      width: auto !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      max-height: min(65dvh, 520px) !important;
+      z-index: 130 !important;
+      overflow-y: auto !important;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .argus-camera-window {
+      height: 52dvh !important;
+    }
   }
 `;
 
@@ -1347,7 +1414,7 @@ function App() {
               <div className="flex items-center gap-2 flex-shrink-0">
                 {!hasStream && !isIframe && feedWorks && (
                   <button onClick={manualRefresh} title="Refresh Feed"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white transition-all group outline-none">
+                    className="no-drag w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white transition-all group outline-none">
                     <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
                   </button>
                 )}
