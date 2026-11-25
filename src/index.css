@@ -234,3 +234,17 @@ button {
     gap: 10px !important;
   }
 }
+/* ARGUS mobile settings panel */
+@media (max-width: 768px) {
+  .argus-settings-panel {
+    position: fixed !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: min(70dvh, 520px);
+    overflow-y: auto;
+    z-index: 60 !important;
+  }
+}
