@@ -180,7 +180,7 @@ button {
 /* ARGUS — mobile camera window */
 
 @media (max-width: 768px) {
-  .react-rnd {
+  .argus-camera-window {
     position: fixed !important;
     top: auto !important;
     right: 0 !important;
