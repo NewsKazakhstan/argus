@@ -1309,7 +1309,7 @@ function App() {
           minHeight={400}
           bounds="window"
           dragHandleClassName="drag-handle"
-          className="z-40"
+          className="argus-camera-window z-40"
         >
           {/* Main Container - Strict Flex Column */}
           <div className="bg-[#05090C]/75 backdrop-blur-3xl rounded-3xl border border-white/10 flex flex-col h-full shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden">
