@@ -1476,7 +1476,7 @@ function App() {
       ) : null}
 
       {/* ── SETTINGS MENU ── */}
-      <div className="absolute bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+      <div className="argus-controls absolute bottom-8 right-8 z-50 flex flex-col items-end gap-4">
         <AnimatePresence>
           {isSettingsOpen && (
             <motion.div
