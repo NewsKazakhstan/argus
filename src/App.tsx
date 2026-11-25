@@ -1011,7 +1011,7 @@ function App() {
   const feedWorks = (selectedCamera ? isFeedWorking(selectedCamera) : false) && !staticFeedFailed;
 
   return (
-    <div className="w-full h-screen relative bg-[#111419] overflow-hidden font-sans cursor-none">
+    <div className="argus-app w-full h-screen relative bg-[#111419] overflow-hidden font-sans cursor-none">
       <style>{scrollbarStyles}</style>
       {/* Map */}
       {is3D ? (
