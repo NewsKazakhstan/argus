@@ -226,3 +226,11 @@ button {
     width: min(210px, calc(100vw - 16px));
   }
 }
+/* ARGUS mobile controls */
+@media (max-width: 768px) {
+  .argus-controls {
+    right: 12px !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    gap: 10px !important;
+  }
+}
