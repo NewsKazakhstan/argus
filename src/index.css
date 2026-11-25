@@ -248,3 +248,16 @@ button {
     z-index: 60 !important;
   }
 }
+/* ARGUS mobile sector filter */
+@media (max-width: 768px) {
+  .argus-filter-panel {
+    position: fixed !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    height: min(70dvh, 520px) !important;
+    max-height: 70dvh !important;
+    z-index: 60 !important;
+  }
+}
