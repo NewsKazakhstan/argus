@@ -1704,7 +1704,7 @@ function App() {
               initial={{ opacity: 0, x: 20, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 20, scale: 0.95 }}
-              className="absolute bottom-0 right-20 w-80 h-[440px] bg-[#05090C]/90 backdrop-blur-2xl rounded-3xl border border-white/10 p-6 shadow-2xl z-50 overflow-hidden flex flex-col"
+              className="argus-filter-panel absolute bottom-0 right-20 w-80 h-[440px] bg-[#05090C]/90 backdrop-blur-2xl rounded-3xl border border-white/10 p-6 shadow-2xl z-50 overflow-hidden flex flex-col"
             >
               <div className="flex items-center justify-between mb-6 flex-shrink-0">
                 <div>
