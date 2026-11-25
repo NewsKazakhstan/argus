@@ -1309,6 +1309,7 @@ function App() {
           minHeight={400}
           bounds="window"
           dragHandleClassName="drag-handle"
+          cancel="button, a, input, .no-drag"
           className="argus-camera-window z-40"
         >
           {/* Main Container - Strict Flex Column */}
@@ -1351,7 +1352,7 @@ function App() {
                   </button>
                 )}
                 <button onClick={() => setSelectedCamera(null)} title="Close"
-                  className="w-10 h-10 rounded-full bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 flex items-center justify-center text-red-400 hover:text-red-300 transition-all outline-none">
+                  className="no-drag w-10 h-10 rounded-full bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 flex items-center justify-center text-red-400 hover:text-red-300 transition-all outline-none">
                   <X className="w-5 h-5" />
                 </button>
               </div>
