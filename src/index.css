@@ -198,7 +198,7 @@ button {
     border-radius: 16px 16px 0 0 !important;
   }
 
-  .react-rnd .drag-handle {
+  .argus-camera-window .drag-handle {
     cursor: default;
   }
 }
